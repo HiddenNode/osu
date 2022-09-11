@@ -191,6 +191,7 @@ namespace osu.Game.Rulesets.Osu.Edit
 
                     // Importantly, update as a single operation so automatic adjustment of control points to different
                     // curve types does not unexpectedly trigger and change the slider's shape.
+                    path.Path.Version.UnbindEvents();
                     path.Path.ControlPoints.Clear();
                     path.Path.ControlPoints.AddRange(controlPoints);
                 }
